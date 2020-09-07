@@ -317,7 +317,7 @@ class Cricket extends React.Component {
     const hit =  runs[Math.floor(Math.random() * runs.length)];
     this.setState(({ballCount, score, inningsCount, balls, overs, currentPlayers, currentPlayer, availAPlayers, availBPlayers, teamAPlayers, teamBPlayers, unavailAPlayers, unavailBPlayers, currentBowler}) => {
 
-      if( ( teamAPlayers.filter(player => player.isEligibleBatsmen === true).length === 1 ) || ( ballCount === 6 && inningsCount === 1 ) ) { /** second innings start */
+      if( ( teamAPlayers.filter(player => player.isEligibleBatsmen === true).length === 1 ) || ( ballCount === 120 && inningsCount === 1 ) ) { /** second innings start */
         console.log('start seccond innings')
 
         return {
@@ -337,7 +337,7 @@ class Cricket extends React.Component {
         }
       }
 
-      else if( ( teamBPlayers.filter(player => player.isEligibleBatsmen === true).length === 1 ) || ( ballCount === 6 && inningsCount === 2 ) ) {
+      else if( ( teamBPlayers.filter(player => player.isEligibleBatsmen === true).length === 1 ) || ( ballCount === 120 && inningsCount === 2 ) ) {
         clearInterval(this.interval);
 
         return {
